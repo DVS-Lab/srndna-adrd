@@ -23,7 +23,7 @@ frame_rate=1
 instruct_dur=3
 initial_fixation_dur = 4
 #final_fixation_dur = 2
-decision_dur=5
+decision_dur=4
 outcome_dur=1
 
 responseKeys=('2','3','z')

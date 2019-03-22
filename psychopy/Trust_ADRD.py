@@ -24,7 +24,7 @@ initial_fixation_dur = 4
 final_fixation_dur = 10
 instruct_dur=3
 outcome_dur=1
-decision_dur=6
+decision_dur=4.5
 
 responseKeys=('2','3','z')
 

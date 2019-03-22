@@ -19,7 +19,7 @@ DEBUG = False
 frame_rate=1
 initial_fixation_dur = 4
 #final_fixation_dur = 2
-decision_dur=6
+decision_dur=4.5
 #outcome_dur=0.25
 fileSuffix = 'UG'
 
