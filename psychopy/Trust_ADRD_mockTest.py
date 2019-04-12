@@ -271,14 +271,14 @@ def do_run(run, trials):
                 rt = resp_onset - trial_onset
                 ISI_pad = decision_dur-rt
                 #answer = 1
-                if resp_val == 2:
+                if resp_val == 'num_2':
                     resp_text_left.setColor('darkorange')
                     response = resp_left
                     if resp_left < resp_right:
                         highlow = 'low'
                     else:
                         highlow = 'high'
-                if resp_val == 3:
+                if resp_val == 'num_3':
                     resp_text_right.setColor('darkorange')
                     response = resp_right
                     if resp_left < resp_right:
@@ -326,7 +326,7 @@ def do_run(run, trials):
         #Wait screen = (decision_dur - rt) + 1.75
         wait_dur = (trial_onset + decision_dur + 1.75)
         if len(resp) > 0:
-            if (int(trial['cLeft']) == 0 and resp_val == 2) or (int(trial['cRight']) == 0 and resp_val == 3):
+            if (int(trial['cLeft']) == 0 and resp_val == 'num_2') or (int(trial['cRight']) == 0 and resp_val == 'num_3'):
                 fixation.draw()
                 win.flip()
                 core.wait(wait_dur - globalClock.getTime())
@@ -347,7 +347,7 @@ def do_run(run, trials):
         partner_resp=float(trial['Reciprocate'])
 
         if len(resp) > 0:
-            if (int(trial['cLeft']) == 0 and resp_val == 2) or (int(trial['cRight']) == 0 and resp_val == 3):
+            if (int(trial['cLeft']) == 0 and resp_val == 'num_2') or (int(trial['cRight']) == 0 and resp_val == 'num_3'):
                 #core.wait(0.5)
                 outcome_onset = globalClock.getTime()
                 fixation.draw()
