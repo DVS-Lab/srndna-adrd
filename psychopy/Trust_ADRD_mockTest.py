@@ -422,13 +422,13 @@ if len (specific_run)==1:
         do_run(2, trials_run3)
     elif run == 4:
         do_run(3, trials_run4)
-    elif run == 5:
-        do_run(4, trials_run5)
+    #elif run == 5:
+    #    do_run(4, trials_run5)
     #elif run == 6:
     #    do_run(5, trials_run6)
     else: 'Run index is not permissible.'
 else:
-    for run, trials in enumerate([trials_run1, trials_run2, trials_run3, trials_run4, trials_run5]):
+    for run, trials in enumerate([trials_run1, trials_run2, trials_run3, trials_run4]):
         do_run(run, trials)
 
 # Exit
