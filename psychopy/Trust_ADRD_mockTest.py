@@ -259,16 +259,21 @@ def do_run(run, trials):
 
             #if answer == 0:
             resp = event.getKeys(keyList = responseKeys)
-            resp = resp[-1:]
+            
+            
 
             if len(resp) > 0:
-                if resp[0] == 'z':
+                trim = resp[0][-1]
+                print trim
+                
+                if trim[0] == 'z':
                     os.chdir(subjdir)
                     trials.saveAsWideText(fileName)
                     os.chdir(expdir)
                     win.close()
                     core.quit()
-                resp_val = int(resp[0])
+                resp_val = int(trim[0])
+                
                 resp_onset = globalClock.getTime()
                 rt = resp_onset - trial_onset
                 ISI_pad = decision_dur-rt
